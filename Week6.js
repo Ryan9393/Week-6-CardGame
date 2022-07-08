@@ -32,3 +32,7 @@ class Deck {
 const newDeck = new Deck();
 newDeck.createDeck();
 console.log(newDeck.cards);
+
+// https://medium.com/@blakeeh723/how-to-build-a-card-game-with-object-oriented-programming-c43cd2cadb3a
+// https://codepen.io/ashwell/pen/RwKKmV?editors=1010
+// https://codereview.stackexchange.com/questions/156152/javascript-based-war-card-game-final
