@@ -38,35 +38,42 @@ class Deck {
 }
 
 class Player {
-    constructor(name) {
-        this.playerName = name;
+    constructor() {
         this.playerCards = [];
+    }
+}
+
+class Computer{
+    constructor(){
+        this.computerCards = []
     }
 }
 class Hand {
     constructor() {
         this.players = [];
     }
-    start(player, Computer) {
+    start(player, computer) {
         this.players.push(new Player(player));
-        this.players.push(new Player(Computer));
+        this.players.push(new Computer(computer));
         let newDeck = new Deck();
         newDeck.createDeck();
         newDeck.shuffleDeck();    
         this.players[0].playerCards = newDeck.cards.slice(0, 26);
-        this.players[1].playerCards = newDeck.cards.slice(26, 52);
+        this.players[1].computerCards = newDeck.cards.slice(26, 52);
     }
 }
 let playerHands = new Hand();
 playerHands.start('Player', 'Computer');
 console.log(playerHands.players);
 
-if(playerCards.value === playercards.value){
-    console.log("tie")
-} else if (playercards.value > playercards.value){
-    console.log("Player wins")
-}else{
-    console.log("Computer Wins")
+for(let i = 0; i < this.playerCards.length; i++){
+    if (this.playerCards[i].value === this.computerCards[i].value){
+        console.log('tie')
+    }else if (this.playerCards[i].value > this.computerCards[i].value){
+        console.log('Player Wins')
+    }else{
+        console.log('Computer Wins')
+    }
 }
 
 
