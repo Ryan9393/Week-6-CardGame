@@ -27,12 +27,58 @@ class Deck {
             }
         }
     }
+    shuffleDeck(){                                                  // Durstenfeld Shuffle
+        for (let i = this.cards.length - 1; i > 0; i--){
+            let j = Math.floor(Math.random()* (i +1));
+            let temp = this.cards[i];
+            this.cards[i] = this.cards[j];
+            this.cards[j] = temp;
+        }
+    }
 }
 
-const newDeck = new Deck();
-newDeck.createDeck();
-console.log(newDeck.cards);
+class Player {
+    constructor(name) {
+        this.playerName = name;
+        this.playerCards = [];
+    }
+}
+class Hand {
+    constructor() {
+        this.players = [];
+    }
+    start(player, Computer) {
+        this.players.push(new Player(player));
+        this.players.push(new Player(Computer));
+        let newDeck = new Deck();
+        newDeck.createDeck();
+        newDeck.shuffleDeck();    
+        this.players[0].playerCards = newDeck.cards.slice(0, 26);
+        this.players[1].playerCards = newDeck.cards.slice(26, 52);
+    }
+}
+let playerHands = new Hand();
+playerHands.start('Player', 'Computer');
+console.log(playerHands.players);
+
+if(playerCards.value === playercards.value){
+    console.log("tie")
+} else if (playercards.value > playercards.value){
+    console.log("Player wins")
+}else{
+    console.log("Computer Wins")
+}
+
+
+
+
+// const newDeck = new Deck();
+// newDeck.createDeck();
+// newDeck.shuffleDeck();
+// console.log(newDeck.cards);
+
 
 // https://medium.com/@blakeeh723/how-to-build-a-card-game-with-object-oriented-programming-c43cd2cadb3a
 // https://codepen.io/ashwell/pen/RwKKmV?editors=1010
 // https://codereview.stackexchange.com/questions/156152/javascript-based-war-card-game-final
+// https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
