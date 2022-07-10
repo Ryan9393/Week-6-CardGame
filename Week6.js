@@ -66,16 +66,25 @@ let playerHands = new Hand();
 playerHands.start('Player', 'Computer');
 console.log(playerHands.players);
 
-for(let i = 0; i < this.playerCards.length; i++){
-    if (this.playerCards[i].value === this.computerCards[i].value){
-        console.log('tie')
-    }else if (this.playerCards[i].value > this.computerCards[i].value){
-        console.log('Player Wins')
-    }else{
-        console.log('Computer Wins')
+while(playerHands.players[0].playerCards>0){
+    for(let i = 0; i < this.players.playerCards.length; i++){
+        if (this.players.playerCards[i] === this.players.computerCards[i]){
+            console.log('tie')
+        }else if (this.playerCards[i] > this.computerCards[i]){
+            console.log('Player Wins')
+        }else{
+            console.log('Computer Wins')
+        }
     }
 }
 
+if(playerHands.players[0].playerCards[0].value === playerHands.players[1].playerCards[0].value){
+    console.log("tie")
+} else if (playerHands.players[0].playerCards[0].value > playerHands.players[1].playerCards[0].value){
+    console.log("Player wins")
+}else{
+    console.log("Computer Wins")
+}
 
 
 
