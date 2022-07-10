@@ -67,14 +67,29 @@ playerHands.start('Player', 'Computer');
 console.log(playerHands.players);
 
 
-
-if(playerHands.players[0].playerCards[0].value === playerHands.players[1].computerCards[0].value){
-    console.log("Tie")
-} else if (playerHands.players[0].playerCards[0].value > playerHands.players[1].computerCards[0].value){
-    console.log("Player wins")
-}else{
-    console.log("Computer Wins")
+let p1 = playerHands.players[0];
+let p2 = playerHands.players[1];
+let v1=0;
+let v2=0;
+for(let i = 0;i<playerHands.players[0].playerCards.length;i++){
+    if (p1.playerCards[i].value>p2.computerCards[i].value){
+        v1++;
+    } else {
+        v2++;
+    }
 }
+console.log(`player ${v1} 
+Computer ${v2}`);
+
+
+
+// if(playerHands.players[0].playerCards[0].value === playerHands.players[1].computerCards[0].value){
+//     console.log("Tie")
+// } else if (playerHands.players[0].playerCards[0].value > playerHands.players[1].computerCards[0].value){
+//     console.log("Player wins")
+// }else{
+//     console.log("Computer Wins")
+// }
 
 // while(playerHands.players[0].playerCards>0){
 //     for(let i = 0; i < players.playerCards.length; i++){
@@ -189,14 +204,14 @@ if(playerHands.players[0].playerCards[0].value === playerHands.players[1].comput
 // let v1=0;
 // let v2=0;
 // for(let i = 0;i<playerHands.players[0].playerCards.length;i++){
-//     if (p1.playerCards[i].value>p2.playerCards[i].value){
+//     if (p1.playerCards[i].value>p2.computerCards[i].value){
 //         v1++;
 //     } else {
 //         v2++;
 //     }
 // }
-// console.log(`player 1 ${v1} 
-// player 2 ${v2}`);
+// console.log(`player ${v1} 
+// Computer ${v2}`);
 
 
 // https://medium.com/@blakeeh723/how-to-build-a-card-game-with-object-oriented-programming-c43cd2cadb3a
