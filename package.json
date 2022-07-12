@@ -4,7 +4,7 @@
   "description": "",
   "main": "Week6.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Ryan9393/Week-6-CardGame/issues"
   },
-  "homepage": "https://github.com/Ryan9393/Week-6-CardGame#readme"
+  "homepage": "https://github.com/Ryan9393/Week-6-CardGame#readme",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0"
+  }
 }

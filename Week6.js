@@ -87,3 +87,4 @@ Computer ${v2}`);
 // https://codepen.io/ashwell/pen/RwKKmV?editors=1010
 // https://codereview.stackexchange.com/questions/156152/javascript-based-war-card-game-final
 // https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+// https://www.youtube.com/watch?v=FKOstRrwT5w&ab_channel=KrisFoster
